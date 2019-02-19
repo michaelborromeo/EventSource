@@ -619,6 +619,7 @@ var EventSourcePolyfill = (function (global) {
 }(typeof window !== 'undefined' ? window : this));
 
 module.exports = { 
-        EventSourcePolyfill: EventSourcePolyfill, 
-        EventSource: global.EventSource || EventSourcePolyfill 
+        default: global.EventSource || EventSourcePolyfill,
+        EventSource: global.EventSource || EventSourcePolyfill,
+        EventSourcePolyfill: EventSourcePolyfill
     };
